@@ -1,54 +1,41 @@
-## عکس از موارد پیاده‌سازی شده:
+# Wordle Game
 
-۱. در نظر گرفتن حالت responsive:
-![Screenshot from 2025-02-04 19-19-59](https://github.com/user-attachments/assets/e8ae3d71-1f24-4648-b1a9-1f4a0d037c28)
+![Screenshot from 2025-02-28 20-05-31](https://github.com/user-attachments/assets/5fc378c8-6e5e-4e3a-8a4a-236c272a7417)
 
-۲. نشان‌دادن متن خظاها (تمامی حروف فارسی +‌ نیم‌اسپیس و کاراکترهای خاص درست در نظر گرفته شده‌اند):
-![Screenshot from 2025-02-04 19-20-14](https://github.com/user-attachments/assets/84f3b424-2f70-4956-b1ca-89196b0cb64b)
+## Overview
 
-![Screenshot from 2025-02-04 19-22-48](https://github.com/user-attachments/assets/0278449d-c30a-4878-a1a8-aaf6d49868c2)
-۳. با افزودن یک آیتم جدید رنگ سطر به رنگ اولویت در می‌اید و قابلیت تکمیل و حذف‌شدن دارند (اگر تسک تکمیل شود به انتهای لیست می‌رود). تعداد تکمیل به کل نشان‌ داده می‌شود و اگر تمامی کارها انجام شده باشد آیکون نمایش داده می‌شود:
+This is a simple implementation of the Wordle game built with React. The game allows players to guess a 5-letter word within a limited number of attempts. The game provides real-time feedback for each guess by highlighting letters in different colors based on their accuracy:
 
-![Screenshot from 2025-02-04 19-23-17](https://github.com/user-attachments/assets/e86831a6-9a48-432b-ac20-074e3ecc627d)
-![Screenshot from 2025-02-04 19-23-25](https://github.com/user-attachments/assets/f793859f-f1d0-4a9d-a1b4-3a83898f05c9)
-پس از رفرش صفحه مقادیر همچنان باقی می‌مانند.
+- **Green:** Correct letter in the correct position.
+- **Yellow:** Correct letter in the wrong position.
+- **Gray:** Incorrect letter not in the word.
 
-# To-Do List Challenge
+## Features
 
-## هدف
+### 1. **Error Messages**
+   - Displays helpful error messages when the player provides an invalid guess.
+   - **Messages:**
+     - "Not enough letters" if the guess is not 5 characters long. => it disables keyboard for some seconds and then enables it.
+     - "Not in word list" if the guess is not part of the word list. => it disables all letters and just by hitting backspace typing is allowed.
 
-ایجاد یک برنامه لیست وظایف ساده با استفاده از تکنولوژی هایی که در پایین آورده شده.
+### 2. **Task Management**
+   - Each guess is recorded and displayed in a list, where the user receives color-coded feedback (green, yellow, or gray).
 
-## تکنولوژی های مورد نیاز:
+![Screenshot from 2025-02-28 20-06-45](https://github.com/user-attachments/assets/c02499c0-8f0f-47ba-8ba6-b2bba5512056)
 
-1. React-Hook-Form / Formik
-2. State Management (Zustand, Recoil, Redux Or Context API)
-3. Ui Kit (Mantine, MUI Or Ant Design) استفاده از Mantine مزییت محسوب میشه
-4. Form Validator(Zod OR Yup)
+![Screenshot from 2025-02-28 19-25-34](https://github.com/user-attachments/assets/d123c11d-d051-419b-9176-cf83fff8b8a3)
 
-## وظایف
+![Screenshot from 2025-02-28 19-26-31](https://github.com/user-attachments/assets/837775e6-f094-44c2-9860-7360b4cdbd75)
 
-1. یک فرم برای اضافه کردن وظایف جدید ایجاد کنید.
-2. فرم دارای یک فیلد عنوان باشد که فقط حروف فارسی در آن استفاده شود.
-3. امکان علامت‌گذاری وظایف به عنوان تکمیل شده و حذف وظایف را اضافه کنید.
-4. از State Manager مورد نظر استفاده کنید. برای مدیریت حالت.
-5. با رفرش کردن صفحه وظایف ثبت شده از بین نرود.
-6. Validation هایی بدیهی و ضروری که خودتون فکر میکنید بهبود دهنده فرم هستند استفاده کنی.
-7. لطفا از کامپوننت های آماده UI Kit که انتخاب کردید استفاده کنید.
-8. طراحی ساده و کاربردی باشد.
+![Screenshot from 2025-02-28 19-29-44](https://github.com/user-attachments/assets/c11bae93-c4b1-4826-a48f-50b3b3ae8065)
 
-## الزامات
+![Screenshot from 2025-02-28 19-34-46](https://github.com/user-attachments/assets/5a4a995e-65b4-4609-bf68-43cea14f13ba)
 
-- کد تمیز و خوانا
-- ارائه توضیحات کافی در کد
+![Screenshot from 2025-02-28 19-34-52](https://github.com/user-attachments/assets/c84179b0-fe09-4ed9-848d-b1b6097a9e6d)
 
-## ارسال پاسخ
+#### Worthy to note that the first "L" is considered as in the wrong spot and last one is in the correct place.
 
-1. این repository را Fork کنید.
-2. تغییرات خود را در Fork خود اعمال کنید.
-3. یک Pull Request به این repository ارسال کنید.
+![Screenshot from 2025-02-28 19-48-58](https://github.com/user-attachments/assets/351369f0-63e4-419d-823c-0f816f7ab6f9)
 
-## راه‌اندازی پروژه
-
-1. ریپو را کلون کنید.
-2. با استفاده از ری اکت این پروژه را از ابتدا ایجاد کنید
+### 3. **Responsive Design**
+   - The game is fully responsive, adjusting to different screen sizes (mobile, tablet, desktop) for an optimal experience on any device.
