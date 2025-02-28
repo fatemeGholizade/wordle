@@ -42,19 +42,17 @@ const Wordle = () => {
       if (currentRowIndex !== -1) {
         let allIncorrect = true;
         const newUsedKeys = { ...usedKeys };
-        // set is for track no duplicated and correct items
-        const greenLetters = new Set<string>();
 
         currentGuess.split("").forEach((letter, i) => {
           if (WORD[i] === letter) {
             // correct letter in correct spot
             newUsedKeys[letter] = "#4caf50";
-            greenLetters.add(letter);
             allIncorrect = false;
-          } else if (WORD.includes(letter) && !greenLetters.has(letter)) {
+          } else if (WORD.includes(letter)) {
             // correct letter in wrong spot, but not already green
-            newUsedKeys[letter] = "#ffeb3b";
-            allIncorrect = false;
+                newUsedKeys[letter] = "#ffeb3b";
+                allIncorrect = false;
+
           } else {
             // incorrect letter
             newUsedKeys[letter] = "#737071";
