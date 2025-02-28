@@ -1,6 +1,5 @@
 ## عکس از موارد پیاده‌سازی شده:
 
-
 ۱. در نظر گرفتن حالت responsive:
 ![Screenshot from 2025-02-04 19-19-59](https://github.com/user-attachments/assets/e8ae3d71-1f24-4648-b1a9-1f4a0d037c28)
 
@@ -13,6 +12,7 @@
 ![Screenshot from 2025-02-04 19-23-17](https://github.com/user-attachments/assets/e86831a6-9a48-432b-ac20-074e3ecc627d)
 ![Screenshot from 2025-02-04 19-23-25](https://github.com/user-attachments/assets/f793859f-f1d0-4a9d-a1b4-3a83898f05c9)
 پس از رفرش صفحه مقادیر همچنان باقی می‌مانند.
+
 # To-Do List Challenge
 
 ## هدف

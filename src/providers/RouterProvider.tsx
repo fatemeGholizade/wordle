@@ -5,7 +5,7 @@ import { NotFoundContainer } from "@/containers/404";
 export const RouterProvider = () => {
   // our main router that can have more items if they are declared in routersList
   return (
-    <BrowserRouter basename="/challenges">
+    <BrowserRouter>
       <Routes>
         {routerList.map((router) => (
           <Route key={router.path} path={router.path} element={router.component} />
